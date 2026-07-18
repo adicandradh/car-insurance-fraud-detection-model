@@ -22,7 +22,7 @@ Hasil eksplorasi data menunjukkan bahwa dataset:
 
 - Tidak memiliki data duplikat.
 - Tidak memiliki *missing values*. 
-- Mengalami **class imbalance**, di mana sekitar **88,5%** data merupakan klaim normal dan sekitar **11,5%** merupakan klaim fraud.
+- Mengalami **class imbalance**, di mana sekitar **87,62%** data merupakan klaim normal dan sekitar **12,38%** merupakan klaim fraud.
 
 Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untuk meningkatkan kemampuan model dalam mengenali kasus fraud.
 
@@ -131,21 +131,21 @@ Berdasarkan hasil pelatihan **Tuned LightGBM**, lima belas fitur berikut memberi
 
 | Rank | Feature | Gain Importance |
 |-----:|---------|----------------:|
-| 1 | `claim_amount` | **479,134.72** |
-| 2 | `police_report_available_YES` | **349,659.47** |
-| 3 | `police_report_available_NO` | 89,668.40 |
-| 4 | `collision_type_Rear Collision` | 86,005.80 |
-| 5 | `collision_type_Unknown` | 65,840.77 |
-| 6 | `incident_type_Vehicle Theft` | 54,446.21 |
-| 7 | `witnesses` | 44,120.76 |
-| 8 | `incident_type_Single Vehicle Collision` | 41,966.95 |
-| 9 | `total_claim_amount` | 37,715.84 |
-| 10 | `collision_type_Side Collision` | 36,113.13 |
-| 11 | `collision_type_Front Collision` | 35,463.20 |
-| 12 | `authorities_contacted_Police` | 29,182.86 |
-| 13 | `number_of_vehicles_involved` | 23,909.56 |
-| 14 | `authorities_contacted_Ambulance` | 23,369.78 |
-| 15 | `authorities_contacted_Other` | 22,334.47 |
+| 1 | `claim_amount` | **479.134,72** |
+| 2 | `police_report_available_YES` | **349.659,47** |
+| 3 | `police_report_available_NO` | 89.668,40 |
+| 4 | `collision_type_Rear Collision` | 86.005,80 |
+| 5 | `collision_type_Unknown` | 65.840,77 |
+| 6 | `incident_type_Vehicle Theft` | 54.446,21 |
+| 7 | `witnesses` | 44.120,76 |
+| 8 | `incident_type_Single Vehicle Collision` | 41.966,95 |
+| 9 | `total_claim_amount` | 37.715,84 |
+| 10 | `collision_type_Side Collision` | 36.113,13 |
+| 11 | `collision_type_Front Collision` | 35.463,20 |
+| 12 | `authorities_contacted_Police` | 29.182,86 |
+| 13 | `number_of_vehicles_involved` | 23.909,56 |
+| 14 | `authorities_contacted_Ambulance` | 23.369,78 |
+| 15 | `authorities_contacted_Other` | 22.334,47 |
 
 Hasil tersebut menunjukkan bahwa **nilai klaim (`claim_amount`)** merupakan faktor yang paling berpengaruh dalam mengidentifikasi potensi fraud. Selain itu, **ketersediaan laporan polisi**, **jenis tabrakan**, **jenis insiden**, **jumlah saksi**, **total nilai klaim**, serta **otoritas yang dihubungi saat kejadian** juga memberikan kontribusi yang signifikan terhadap proses prediksi model.
 
