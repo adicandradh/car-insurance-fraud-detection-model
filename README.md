@@ -84,7 +84,7 @@ Hyperparameter tuning dilakukan menggunakan **RandomizedSearchCV** untuk mempero
 
 | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC | Average Precision |
 |---------|---------:|----------:|--------:|----------:|--------:|------------------:|
-| Logistic Regression | **0.8943** | 0.6708 | 0.2880 | 0.4030 | 0.8568 | 0.5221 |
+| Logistic Regression | 0.8943 | **0.6708** | 0.2880 | 0.4030 | 0.8568 | 0.5221 |
 | LightGBM | **0.9022** | 0.6612 | 0.4307 | 0.5216 | 0.8779 | 0.5671 |
 | Tuned Logistic Regression | 0.8695 | 0.4672 | 0.3836 | 0.4213 | 0.8376 | 0.4549 |
 | **Tuned LightGBM** | 0.8980 | 0.5903 | **0.5760** | **0.5831** | **0.8799** | **0.5793** |
@@ -131,8 +131,8 @@ Berdasarkan hasil pelatihan **Tuned LightGBM**, lima belas fitur berikut memberi
 
 | Rank | Feature | Gain Importance |
 |-----:|---------|----------------:|
-| 1 | `claim_amount` | 479,134.72 |
-| 2 | `police_report_available_YES` | 349,659.47 |
+| 1 | `claim_amount` | **479,134.72** |
+| 2 | `police_report_available_YES` | **349,659.47** |
 | 3 | `police_report_available_NO` | 89,668.40 |
 | 4 | `collision_type_Rear Collision` | 86,005.80 |
 | 5 | `collision_type_Unknown` | 65,840.77 |
