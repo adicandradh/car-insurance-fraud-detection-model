@@ -1,1 +1,1 @@
-# car-insurance-fraud-detection-model
+# Car Insurance Fraud Detection Model
