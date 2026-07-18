@@ -9,7 +9,7 @@ Project ini bertujuan untuk membangun model machine learning yang mampu mendetek
 Pipeline dikembangkan secara **end-to-end**, mulai dari exploratory data analysis (EDA), preprocessing data, penanganan *class imbalance*, pembangunan model baseline, hyperparameter tuning, evaluasi model, *threshold optimization*, hingga analisis *feature importance*. Model yang dihasilkan diharapkan dapat membantu perusahaan asuransi mengidentifikasi klaim yang berpotensi fraud sehingga proses investigasi menjadi lebih efektif, efisien, dan berbasis data.
 
 
-# 📂 Dataset Overview
+## 📂 Dataset Overview
 
 Dataset yang digunakan merupakan data historis klaim asuransi kendaraan yang terdiri dari sekitar **30.000 data** dengan **47 variabel**, mencakup informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim.
 
@@ -27,7 +27,7 @@ Hasil eksplorasi data menunjukkan bahwa dataset:
 Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untuk meningkatkan kemampuan model dalam mengenali kasus fraud.
 
 
-# 🎯 Objectives
+## 🎯 Objectives
 
 - Memahami karakteristik data melalui exploratory data analysis (EDA).
 - Melakukan preprocessing dan feature encoding.
@@ -39,7 +39,7 @@ Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untu
 - Mengidentifikasi faktor-faktor yang paling berpengaruh terhadap prediksi fraud menggunakan Gain Feature Importance.
 
 
-# ⚙️ Machine Learning Pipeline
+## ⚙️ Machine Learning Pipeline
 
 1. Data Understanding
 2. Exploratory Data Analysis (EDA)
@@ -55,7 +55,7 @@ Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untu
 12. Gain Feature Importance Analysis
 
 
-# 🛠️ Tools & Libraries
+## 🛠️ Tools & Libraries
 
 - Python
 - Pandas
@@ -66,7 +66,7 @@ Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untu
 - Imbalanced-learn
 
 
-# 🤖 Machine Learning Models
+## 🤖 Machine Learning Models
 
 Project ini membandingkan empat model klasifikasi, yaitu:
 
@@ -78,9 +78,9 @@ Project ini membandingkan empat model klasifikasi, yaitu:
 Hyperparameter tuning dilakukan menggunakan **RandomizedSearchCV** untuk memperoleh kombinasi parameter terbaik pada masing-masing model.
 
 
-# 📈 Model Performance
+## 📈 Model Performance
 
-## Perbandingan Model
+### Perbandingan Model
 
 | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC | Average Precision |
 |---------|---------:|----------:|--------:|----------:|--------:|------------------:|
@@ -94,13 +94,13 @@ Berdasarkan hasil evaluasi, **Tuned LightGBM** dipilih sebagai model terbaik kar
 Walaupun model **LightGBM** memiliki **Accuracy** yang sedikit lebih tinggi (90,22%), metrik tersebut kurang representatif pada dataset yang mengalami *class imbalance*. Oleh karena itu, pemilihan model dilakukan berdasarkan **F1-Score**, karena mampu memberikan keseimbangan terbaik antara **Precision** dan **Recall** dalam mendeteksi klaim fraud.
 
 
-# 🎯 Threshold Optimization
+## 🎯 Threshold Optimization
 
 Alih-alih menggunakan threshold default sebesar **0,50**, project ini melakukan evaluasi terhadap beberapa nilai threshold untuk menentukan titik klasifikasi yang paling optimal.
 
 Pemilihan threshold dilakukan berdasarkan **F1-Score**, karena metrik ini memberikan keseimbangan terbaik antara **Precision** dan **Recall**. Pendekatan ini dipilih karena dataset tidak menyediakan informasi mengenai biaya bisnis (*business cost*) dari kesalahan prediksi (*false positive* dan *false negative*), sehingga F1-Score menjadi metrik yang paling representatif.
 
-## Hasil Evaluasi Threshold
+### Hasil Evaluasi Threshold
 
 | Threshold | Precision | Recall | F1-Score |
 |----------:|----------:|--------:|----------:|
@@ -125,7 +125,7 @@ Selain menggunakan F1-Score sebagai rekomendasi utama, threshold juga dapat dise
 | **F1-Score Tinggi (Dipilih)** | Ketika kemampuan deteksi fraud dan efisiensi investigasi sama-sama penting. | Memberikan keseimbangan terbaik antara Precision dan Recall. | Tidak memaksimalkan Precision maupun Recall secara individual. |
 
 
-# 🔍 Top 15 Gain Feature Importance
+## 🔍 Top 15 Gain Feature Importance
 
 Berdasarkan hasil pelatihan **Tuned LightGBM**, lima belas fitur berikut memberikan kontribusi terbesar terhadap proses identifikasi klaim fraud berdasarkan **Gain Feature Importance**.
 
@@ -152,7 +152,7 @@ Hasil tersebut menunjukkan bahwa **nilai klaim (`claim_amount`)** merupakan fakt
 Secara umum, model lebih banyak memanfaatkan informasi yang berkaitan dengan **besarnya nilai klaim**, **kondisi dan karakteristik kecelakaan**, serta **bukti pendukung setelah insiden** dibandingkan karakteristik demografis pemegang polis. Hal ini menunjukkan bahwa informasi yang diperoleh selama proses pelaporan klaim memiliki peran penting dalam membedakan klaim fraud dan klaim yang sah.
 
 
-# 💡 Business Recommendations
+## 💡 Business Recommendations
 
 - Mengintegrasikan model **Tuned LightGBM** ke dalam proses *claim screening* sebagai alat bantu dalam mendeteksi potensi fraud.
 - Menggunakan **threshold 0,45** sebagai konfigurasi awal karena memberikan keseimbangan terbaik antara kemampuan mendeteksi fraud dan efisiensi investigasi.
