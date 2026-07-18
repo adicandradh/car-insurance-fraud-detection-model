@@ -84,7 +84,7 @@ Hyperparameter tuning dilakukan menggunakan **RandomizedSearchCV** untuk mempero
 
 | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC | Average Precision |
 |---------|---------:|----------:|--------:|----------:|--------:|------------------:|
-| Logistic Regression | 0.8943 | 0.6708 | 0.2880 | 0.4030 | 0.8568 | 0.5221 |
+| Logistic Regression | **0.8943** | 0.6708 | 0.2880 | 0.4030 | 0.8568 | 0.5221 |
 | LightGBM | **0.9022** | 0.6612 | 0.4307 | 0.5216 | 0.8779 | 0.5671 |
 | Tuned Logistic Regression | 0.8695 | 0.4672 | 0.3836 | 0.4213 | 0.8376 | 0.4549 |
 | **Tuned LightGBM** | 0.8980 | 0.5903 | **0.5760** | **0.5831** | **0.8799** | **0.5793** |
@@ -107,7 +107,7 @@ Pemilihan threshold dilakukan berdasarkan **F1-Score**, karena metrik ini member
 | 0.30 | 0.3596 | **0.8102** | 0.4981 |
 | 0.35 | 0.5010 | 0.6837 | 0.5783 |
 | 0.40 | 0.5460 | 0.6474 | 0.5924 |
-| **0.45** | **0.5842** | 0.6258 | **0.6043** |
+| 0.45 | 0.5842 | 0.6258 | **0.6043** |
 | 0.50 | 0.5903 | 0.5760 | 0.5831 |
 | 0.55 | 0.6203 | 0.5101 | 0.5598 |
 | 0.60 | 0.6556 | 0.4536 | 0.5362 |
@@ -125,11 +125,7 @@ Selain menggunakan F1-Score sebagai rekomendasi utama, threshold juga dapat dise
 | **F1-Score Tinggi (Dipilih)** | Ketika kemampuan deteksi fraud dan efisiensi investigasi sama-sama penting. | Memberikan keseimbangan terbaik antara Precision dan Recall. | Tidak memaksimalkan Precision maupun Recall secara individual. |
 
 
-# 🔍 Top 10 Gain Feature Importance
-
-Berdasarkan hasil pelatihan **Tuned LightGBM**, sepuluh fitur berikut memberikan kontribusi terbesar terhadap proses identifikasi klaim fraud.
-
-## 🔍 Top 15 Gain Feature Importance
+# 🔍 Top 15 Gain Feature Importance
 
 Berdasarkan hasil pelatihan **Tuned LightGBM**, lima belas fitur berikut memberikan kontribusi terbesar terhadap proses identifikasi klaim fraud berdasarkan **Gain Feature Importance**.
 
