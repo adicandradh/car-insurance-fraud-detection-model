@@ -21,7 +21,7 @@ Variabel target pada dataset adalah **`fraud_reported`**, dengan:
 Hasil eksplorasi data menunjukkan bahwa dataset:
 
 - Tidak memiliki data duplikat.
-- Memiliki sedikit *missing values* pada beberapa variabel.
+- Tidak memiliki missing values. 
 - Mengalami **class imbalance**, di mana sekitar **88,5%** data merupakan klaim normal dan sekitar **11,5%** merupakan klaim fraud.
 
 Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untuk meningkatkan kemampuan model dalam mengenali kasus fraud.
