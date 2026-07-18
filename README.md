@@ -6,12 +6,12 @@ Personal Project
 
 Project ini bertujuan untuk membangun model machine learning yang mampu mendeteksi potensi **fraud pada klaim asuransi kendaraan** berdasarkan informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim yang diajukan.
 
-Pipeline dikembangkan secara **end-to-end**, mulai dari exploratory data analysis (EDA), preprocessing data, penanganan *class imbalance*, pembangunan model baseline, hyperparameter tuning, evaluasi model, *threshold optimization*, hingga analisis *feature importance*. Model yang dihasilkan diharapkan dapat membantu perusahaan asuransi mengidentifikasi klaim yang berpotensi fraud sehingga proses investigasi menjadi lebih efektif, efisien, dan berbasis data.
+Pipeline dikembangkan secara **end-to-end**, mulai dari *exploratory data analysis* (EDA), *preprocessing data*, penanganan *class imbalance*, pembangunan model baseline, *hyperparameter tuning*, evaluasi model, *threshold optimization*, hingga analisis *feature importance*. Model yang dihasilkan diharapkan dapat membantu perusahaan asuransi mengidentifikasi klaim yang berpotensi fraud sehingga proses investigasi menjadi lebih efektif, efisien, dan berbasis data.
 
 
 ## 📂 Dataset Overview
 
-Dataset yang digunakan merupakan data historis klaim asuransi kendaraan yang terdiri dari sekitar **30.000 data** dengan **47 variabel**, mencakup informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim.
+Dataset yang digunakan merupakan data historis klaim asuransi kendaraan yang terdiri dari sekitar **30.000 data** dengan **24 variabel**, mencakup informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim.
 
 Variabel target pada dataset adalah **`fraud_reported`**, dengan:
 
@@ -21,7 +21,7 @@ Variabel target pada dataset adalah **`fraud_reported`**, dengan:
 Hasil eksplorasi data menunjukkan bahwa dataset:
 
 - Tidak memiliki data duplikat.
-- Tidak memiliki missing values. 
+- Tidak memiliki *missing values*. 
 - Mengalami **class imbalance**, di mana sekitar **88,5%** data merupakan klaim normal dan sekitar **11,5%** merupakan klaim fraud.
 
 Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untuk meningkatkan kemampuan model dalam mengenali kasus fraud.
@@ -29,11 +29,11 @@ Oleh karena itu, proses pengembangan model menerapkan teknik **SMOTETomek** untu
 
 ## 🎯 Objectives
 
-- Memahami karakteristik data melalui exploratory data analysis (EDA).
-- Melakukan preprocessing dan feature encoding.
-- Mengembangkan serta membandingkan beberapa model klasifikasi.
+- Memahami karakteristik data melalui *exploratory data analysis* (EDA).
+- Melakukan *preprocessing* dan *feature encoding*.
 - Menangani permasalahan *class imbalance* menggunakan SMOTETomek.
-- Melakukan hyperparameter tuning menggunakan RandomizedSearchCV.
+- Mengembangkan serta membandingkan beberapa model klasifikasi.
+- Melakukan *hyperparameter tuning* menggunakan RandomizedSearchCV.
 - Mengevaluasi performa model menggunakan berbagai metrik klasifikasi.
 - Mengoptimalkan threshold klasifikasi berdasarkan F1-Score.
 - Mengidentifikasi faktor-faktor yang paling berpengaruh terhadap prediksi fraud menggunakan Gain Feature Importance.
