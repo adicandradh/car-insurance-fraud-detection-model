@@ -11,7 +11,7 @@ Pipeline dikembangkan secara **end-to-end**, mulai dari *exploratory data analys
 
 ## 📂 Dataset Overview
 
-Dataset yang digunakan merupakan data historis klaim asuransi kendaraan yang terdiri dari sekitar **30.000 data** dengan **24 variabel**, mencakup informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim.
+Dataset yang digunakan merupakan data historis klaim asuransi kendaraan yang terdiri dari **30.000 data** dengan **24 variabel**, mencakup informasi polis, karakteristik pelanggan, detail kendaraan, informasi kecelakaan, serta data klaim.
 
 Variabel target pada dataset adalah **`fraud_reported`**, dengan:
 
